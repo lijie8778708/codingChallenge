@@ -20,7 +20,7 @@ app.listen(3000)
 app.get('/insert/:data', (req, res) => {
   const data = parseInt(req.params.data)
   if (zipSet.has(data)) {
-    res.status(200).send(`zip code ${data} already existed,`)
+    res.status(200).send(`zip code ${data} already existed.`)
   } else {
     zipSet.add(data)
     res.status(200).send(`zip code ${data} inserted.`)
